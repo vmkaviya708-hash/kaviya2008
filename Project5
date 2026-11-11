@@ -1,8 +1,12 @@
 #include <stdio.h>
+#include <conio.h>
+
 void main()
 {
     FILE *fp;
     char name[300];
+
+    clrscr();
 
     // 1. Writing data into file
     fp = fopen("feedback.txt", "w");
@@ -10,11 +14,11 @@ void main()
     if (fp == NULL)
     {
         printf("File cannot be opened");
-        
+        getch();
         return;
     }
 
-    fprintf(fp, "C program class where went of super and till now it is going super ");
+    fprintf(fp, "The service was very good and useful.");
 
     fclose(fp);
 
@@ -27,11 +31,11 @@ void main()
     if (fp == NULL)
     {
         printf("File cannot be opened");
-        
+        getch();
         return;
     }
 
-    fprintf(fp, "\n but now we are getting the program more so it is helpful to learn more knowledge and useful for us");
+    fprintf(fp, "\nI am satisfied with the overall experience.");
 
     fclose(fp);
 
@@ -44,7 +48,7 @@ void main()
     if (fp == NULL)
     {
         printf("File cannot be opened");
-        
+        getch();
         return;
     }
 
@@ -57,4 +61,5 @@ void main()
 
     fclose(fp);
 
+    getch();
 }
